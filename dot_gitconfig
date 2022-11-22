@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+	templatedir = /Users/jackdewinter/.git-templates
+[user]
+	name = Jack Dewinter
+	email = jackdewinter1@gmail.com
+
+[includeIf "gitdir:~/code/work/"]
+    path = ~/code/work/.gitconfig
