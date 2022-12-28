@@ -1,6 +1,11 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
+# Python
+brew install python
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
+curl -sSL https://install.python-poetry.org | python3 -
+
 brew bundle --no-lock --file=/dev/stdin <<EOF
 brew "git"
 brew "gh"
@@ -11,4 +16,20 @@ cask "firefox"
 {{ end }}
 
 EOF
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install Powerline Fonts
+FILE="/Users/jackdewinter/Library/Fonts/Arimo for Powerline.ttf"
+if [ -f "$FILE" ]; then
+    echo "Powerline fonts already installed"
+else
+    echo "Installing Powerline fonts"
+    git clone https://github.com/powerline/fonts.git --depth=1
+    cd fonts || exit
+    ./install.sh
+    cd ..
+    rm -rf fonts
+fi
+
 {{ end -}}
