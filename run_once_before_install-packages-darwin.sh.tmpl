@@ -4,7 +4,11 @@
 brew bundle --no-lock --file=/dev/stdin <<EOF
 brew "git"
 brew "gh"
-cask "iterm2"
+
+{{ if eq .chezmoi.username "jackdewinter" }}
+cask "hyper"
 cask "firefox"
+{{ end }}
+
 EOF
 {{ end -}}
