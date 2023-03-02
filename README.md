@@ -3,7 +3,9 @@ My setup
 
 Usage:
 
+* Edit `dot_zshrc`
 * Run scripts - `chezmoi apply`
+* Run `chezmoi cd` and commit and push changes
 
 Interesting files:
 
