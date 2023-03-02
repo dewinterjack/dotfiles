@@ -107,3 +107,5 @@ prompt_context() {
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export EDITOR="code --wait"
+
+eval "$(github-copilot-cli alias -- "$0")"
