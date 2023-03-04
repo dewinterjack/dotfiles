@@ -9,6 +9,7 @@ curl -sSL https://install.python-poetry.org | python3 -
 brew bundle --no-lock --file=/dev/stdin <<EOF
 brew "git"
 brew "gh"
+brew "node"
 
 {{ if eq .chezmoi.username "jackdewinter" }}
 cask "hyper"
