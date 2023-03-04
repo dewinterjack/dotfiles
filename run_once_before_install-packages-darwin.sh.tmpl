@@ -33,4 +33,9 @@ else
     rm -rf fonts
 fi
 
+echo "Installing latest npm packages"
+
+npm update -g
+npm install -g @githubnext/github-copilot-cli 
+
 {{ end -}}
