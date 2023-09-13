@@ -4,7 +4,6 @@
 # Python
 brew install python
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
-curl -sSL https://install.python-poetry.org | python3 -
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 brew "git"
@@ -14,6 +13,10 @@ brew "node"
 {{ if eq .chezmoi.username "jackdewinter" }}
 cask "hyper"
 cask "firefox"
+cask "visual-studio-code"
+cask "setapp"
+cask "ticktick"
+cask "notion"
 {{ end }}
 
 EOF
