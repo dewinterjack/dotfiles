@@ -1,0 +1,9 @@
+{{ if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+osascript -e 'tell application "System Preferences" to quit'
+
+{{ end -}}
+echo "MacOS config applied"
