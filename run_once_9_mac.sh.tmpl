@@ -39,5 +39,8 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # Disable empty trash warning
 defaults write com.apple.finder WarnOnEmptyTrash -bool NO
 
+# Speed up dock auto hide
+defaults write com.apple.dock autohide-delay -float 0; killall Dock
+
 {{ end -}}
 echo "MacOS config applied"
